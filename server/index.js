@@ -3,10 +3,11 @@ const cors=require('cors')
 const express=require('express');
 const mongoose=require('mongoose');
 const app=express();
+const imageRoutes=require('./routes/imageRoutes')
 
 app.use(cors());
 app.use(express.json());
-
+app.use('/',imageRoutes);
 
 const MONGO_URL=process.env.MONGO_URL;
 const PORT=process.env.PORT || 5000;
