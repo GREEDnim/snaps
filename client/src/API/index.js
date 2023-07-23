@@ -1,6 +1,6 @@
 import axios from 'axios';
 const API=axios.create({
-    baseURL:'http://localhost:5000/',
+    baseURL:'https://snaps-0we7.onrender.com',
 })
 
 export async function checkServerStarted(){
@@ -11,7 +11,7 @@ export async function checkServerStarted(){
         return false;
  
     } catch (error) {
-        
+
         console.log(error.message);
         return false;
     }
