@@ -1,0 +1,9 @@
+.cards-container{
+    min-height: 100vh;
+    flex-grow: 1;
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-auto-rows: 200px;
+    
+}

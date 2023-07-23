@@ -1,0 +1,26 @@
+.header{
+  padding: 1em;
+    background-color: azure;
+    z-index: 3;
+    position:sticky;
+    top:0;
+    display:flex;
+    gap:1em;
+}
+
+.add-pic-button{
+    margin-left:auto;
+
+    border-radius: 10px;
+    padding:1em;
+    background-color: #3DB46D;
+    border: none;
+    color:white;
+}
+
+.add-pic-button:hover{
+  background-color: rgb(85, 156, 85);
+}
+
+
+

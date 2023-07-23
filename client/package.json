@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@enipx/react-tags-input": "^1.0.1",
     "axios": "^1.4.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-loading-spin": "^2.1.9",
+    "react-tag-input": "^6.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

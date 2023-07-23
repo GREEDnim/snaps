@@ -7,6 +7,9 @@ const imageRoutes=require('./routes/imageRoutes')
 
 app.use(cors());
 app.use(express.json());
+app.get('/',(req,res)=>{
+    res.status(200).json({message:"server is up and ready"})
+})
 app.use('/',imageRoutes);
 
 const MONGO_URL=process.env.MONGO_URL;

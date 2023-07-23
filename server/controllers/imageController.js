@@ -5,13 +5,12 @@ async function getImages(req,res){
         const images=await Image.find({});
         res.status(200).json({
             message:"fetched successfully",
-            data:images, 
+            images 
         });
     } catch (error) {
         res.status(500).json({message:"could not fetch images"});
     }
     
-
 }
 async function postImage(req,res){
 
@@ -22,7 +21,7 @@ async function postImage(req,res){
             tags:req.body.tags,
         });
         const resImage=await image.save();
-        res.status(200).json({message:"image posted successfully",data:resImage})
+        res.status(200).json({message:"image posted successfully",image:resImage})
     
     } catch (error) {
         res.status(500).json({message:"failed to post image"})

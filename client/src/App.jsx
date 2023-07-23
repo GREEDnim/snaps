@@ -1,13 +1,20 @@
+import React from 'react'
+import Home from './components/Home/Home'
+import Loading from './components/Loading/Loading';
+import { useState,useEffect } from 'react';
+import { checkServerStarted } from './API';
+export default function App () {
+    const [isServerReady, setServerReady] = useState(false);
 
-import './App.css'
-
-function App() {
+  useEffect(() => {
+        async function renderWhenLoad(){
+            const started=await checkServerStarted();
+            setServerReady(started);
+        }
+        renderWhenLoad();
+  }, []);
 
   return (
-    <>
-      hello world
-    </>
+        isServerReady? <Home/>: <Loading/>
   )
 }
-
-export default App
