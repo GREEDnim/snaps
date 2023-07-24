@@ -9,7 +9,7 @@ export default function App () {
   useEffect(() => {
         async function renderWhenLoad(){
             const started=await checkServerStarted();
-            // setServerReady(started);
+            setServerReady(started);
         }
         renderWhenLoad();
   }, []);
