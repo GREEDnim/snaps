@@ -1,0 +1,40 @@
+/* StartingServerAnimation.css */
+@keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:white;
+  }
+  
+  .loading-wrapper {
+    position: relative;
+  }
+  
+  .loading-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    animation: fadeInAnimation 1s ease-in-out, bounceAnimation 1s ease-in-out infinite;
+    animation-delay: 0.2s;
+  }
+  
+  

@@ -1,20 +1,12 @@
-import LoadingSpin from "react-loading-spin";
 import React from 'react'
-
+import './Loading.css'
 export default function Loading() {
   return (
-    <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-            <LoadingSpin
-            duration="2s"
-            width="50px"
-            timingFunction="ease-in-out"
-            direction="alternate"
-            size="500px"
-            primaryColor="yellow"
-            secondaryColor="red"
-            numberOfRotationsInAnimation={2}
-        />
+    <div className="container">
+    <div className="loading-wrapper">
+        <div className="loading-text">Starting the server...</div>
     </div>
-    
+  </div>
   )
+   
 }
